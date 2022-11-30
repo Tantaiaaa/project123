@@ -14,4 +14,15 @@ class Profile {
     this.phone,
     this.group,
   });
+
+  factory Profile.fromMap(map) {
+    return Profile(
+      email: map('email'),
+      password: map('password'),
+      name: map('map'),
+      id: map('id'),
+      group: map('group'),
+      phone: map('phone'),
+    );
+  }
 }
